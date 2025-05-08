@@ -1,0 +1,243 @@
+/* setting */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(114,0,255,1) 100%);
+    overflow: hidden;
+}
+
+/* font */
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.orbitron-400 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.monoton-regular {
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (min-width: 970px) {
+    /* header */
+    header {
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+
+    /* dodecahedron */
+    .dodecahedron {
+        top: 60px;
+        left: 60px;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: spin 15s infinite linear;
+        transform-origin: 30px 30px 0;
+    }
+
+    .face {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        aspect-ratio: 1;
+        clip-path: polygon(100% 50%,65.45% 97.55%,9.55% 79.39%,9.55% 20.61%,65.45% 2.45%);
+
+    }
+
+    .face.f-1  { transform: rotateY(   0.000deg) rotateX( 31.717deg) rotateZ(-18deg) translateZ(55px); background: #708090; }
+    .face.f-12 { transform: rotateY(   0.000deg) rotateX(-31.717deg) rotateZ( 18deg) translateZ(55px); background: #6495ED; }
+    .face.f-6  { transform: rotateY( 180.000deg) rotateX( 31.717deg) rotateZ(-18deg) translateZ(55px); background: #E9967A; }
+    .face.f-11 { transform: rotateY( 180.000deg) rotateX(-31.717deg) rotateZ( 18deg) translateZ(55px); background: #F0E68C; }
+    .face.f-2  { transform: rotateY(  58.283deg) rotateX(  0.000deg) rotateZ( 36deg) translateZ(55px); background: #4682B4; }
+    .face.f-5  { transform: rotateY( -58.283deg) rotateX(  0.000deg) rotateZ( -0deg) translateZ(55px); background: #BC8F8F; }
+    .face.f-10 { transform: rotateY( 121.717deg) rotateX(  0.000deg) rotateZ(  0deg) translateZ(55px); background: #CD5C5C; }
+    .face.f-7  { transform: rotateY(-121.717deg) rotateX(  0.000deg) rotateZ( 36deg) translateZ(55px); background: #9370DB; }
+    .face.f-3  { transform: rotateY(  90.000deg) rotateX( 58.283deg) rotateZ( 18deg) translateZ(55px); background: #6B8E23; }
+    .face.f-9  { transform: rotateY(  90.000deg) rotateX(-58.283deg) rotateZ(-18deg) translateZ(55px); background: #8FBC8F; }
+    .face.f-4  { transform: rotateY( -90.000deg) rotateX( 58.283deg) rotateZ( 18deg) translateZ(55px); background: #5F9EA0; }
+    .face.f-8  { transform: rotateY( -90.000deg) rotateX(-58.283deg) rotateZ(-18deg) translateZ(55px); background: #CD853F; }
+
+    @keyframes spin {
+        from {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+        to {transform: rotateX(1080deg) rotateY(1080deg) rotateZ(360deg);}
+    }
+
+    /* header box */
+    .header-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-box > div {
+        width: 80%;
+    }
+
+    .Lorem {
+        display: block;
+        width: 800px;
+        height: 100px;
+        font-size: 60px;
+        padding: 0;
+        margin: 0;
+        color: transparent;
+        background-clip: text;
+        background-color: rgba(114,0,255,1);
+        transition: all 0.3s ease;
+    }
+
+    /* font change */
+    .font-change-container {
+        width: 100%;
+        display: flex;
+    }
+
+    .font-change-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .font-change {
+        position: relative;
+        left: -9999px;
+    }
+
+    .font-label {
+        padding: 0;
+        margin: 0;
+        width: 40px;
+        height: 15px;
+        background-color: #fff;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        border-radius: 7.5px;
+    }
+
+    .header-box > div:has(#font-radio-monoton-regular:checked) .Lorem {
+        font-family: "Monoton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .header-box > div:has(#font-radio-orbitron-400:checked) .Lorem {
+        font-family: "Orbitron", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .header-box > div:has(#font-radio-anton-regular:checked) .Lorem {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .font-label-monoton-regular::after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(114,0,255,1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    #font-radio-monoton-regular:checked + .font-label-monoton-regular::after {
+        transform: translateX(25px);
+        background-color: #CD5C5C;
+    }
+
+    .font-label-orbitron-400::after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(114,0,255,1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    #font-radio-orbitron-400:checked + .font-label-orbitron-400::after {
+        transform: translateX(25px);
+        background-color: #CD5C5C;
+    }
+
+    .font-label-anton-regular::after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(114,0,255,1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    #font-radio-anton-regular:checked + .font-label-anton-regular::after {
+        transform: translateX(25px);
+        background-color: #CD5C5C;
+    }
+
+    .color-change-box {
+        display: flex;
+        align-items: center;
+    }
+
+    #color-change {
+        position: relative;
+        left: -9999px;
+    }
+
+    .color-label {
+        padding: 0;
+        margin: 0;
+        width: 40px;
+        height: 15px;
+        background-color: rgba(114,0,255,1);
+        display: block;
+        cursor: pointer;
+        position: relative;
+        border-radius: 7.5px;
+        transition: all 0.3s ease;
+    }
+
+    #color-change:checked + .color-label {
+        background-color: #CD5C5C;
+    }
+
+    .header-box > div:has(#color-change:checked) .Lorem {
+        color: #CD5C5C;
+    }
+
+    /* main */
+
+    /* intro */
+    .intro {
+        width: calc(100vw - 200px);
+        height: 250px;
+        background-color: #fff;
+    }
+}
