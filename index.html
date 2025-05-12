@@ -22,9 +22,10 @@
         <meta name="mobile-web-app-capable" content="yes">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Monoton&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Monoton&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="top"></div>
         <header>
             <div class="dodecahedron">
                 <div class="face f-1"></div>
@@ -45,45 +46,234 @@
                     <p class="Lorem">LJS's&nbsp;&nbsp;Portfolio</p>
                     <div class="font-change-container">
                         <div class="font-change-box">
-                            <input type="radio" name="font-change-radios" class="font-change" id="font-radio-monoton-regular" checked>
+                            <input type="radio" name="font-change-radios" class="font-change" id="font-radio-monoton-regular">
                             <label for="font-radio-monoton-regular" class="font-label font-label-monoton-regular"></label>
-                            <input type="radio" name="font-change-radios" class="font-change" id="font-radio-orbitron-400">
+                            <input type="radio" name="font-change-radios" class="font-change" id="font-radio-orbitron-400" checked>
                             <label for="font-radio-orbitron-400" class="font-label font-label-orbitron-400"></label>
                             <input type="radio" name="font-change-radios" class="font-change" id="font-radio-anton-regular">
                             <label for="font-radio-anton-regular" class="font-label font-label-anton-regular"></label>    
                         </div>
                         <div class="color-change-box">
-                            <input type="checkbox" id="color-change">
+                            <input type="checkbox" id="color-change" checked>
                             <label for="color-change" class="color-label"></label>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="move">
+                <ul>
+                    <a href="#intro" class="title-item title-1"><li>INTRO</li></a>
+                    <a href="#skill" class="title-item title-2"><li>SKILL</li></a>
+                    <a href="#project" class="title-item title-3"><li>PROJECT</li></a>
+                    <a href="#design-guide" class="title-item title-4"><li>DESIGN</li></a>
+                </ul>
+            </div>
         </header>
+        <a href="#top"><div class="move-top">↑</div></a>
         <main>
             <section class="intro-container">
-                <article class="intro">
-                    
+                <article class="intro" id="intro">
+                    <div>
+                        <div class="anton-regular intro-title text title">INTRO</div>
+                        <div class="intro-item-container">
+                            <div class="name intro-item-box">
+                                <div>
+                                    <div>
+                                        <img src="images/icon_name.png" alt="이름 아이콘" class="intro-icon">
+                                        <span class="intro-item black-han-sans-regular text">이름</span>
+                                    </div>
+                                    <p>임재성</p>
+                                </div>
+                            </div>
+                            <div class="birth intro-item-box">
+                                <div>
+                                    <div>
+                                        <img src="images/icon_birth.png" alt="생년월일 아이콘" class="intro-icon">
+                                        <span class="intro-item black-han-sans-regular text">생년월일</span>
+                                    </div>
+                                    <p>2006.10.30</p>
+                                </div>
+                            </div>
+                            <div class="email intro-item-box">
+                                <div>
+                                    <div>
+                                        <img src="images/icon_email.png" alt="이메일 아이콘" class="intro-icon">
+                                        <span class="intro-item black-han-sans-regular text">이메일</span>
+                                    </div>
+                                    <p>limjaesung732@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="grade intro-item-box">
+                                <div>
+                                    <div>
+                                        <img src="images/icon_grade.png" alt="학력 아이콘" class="intro-icon">
+                                        <span class="intro-item black-han-sans-regular text">학력</span>
+                                    </div>
+                                    <p>대림대학교 소프트웨어학부<br>(재학중)</p>
+                                </div>
+                            </div>
+                            <div class="github intro-item-box">
+                                <a href="https://github.com/limjs245" class="intro-item">
+                                    <img src="images/icon_github.png" alt="깃허브 아이콘" class="intro-icon">
+                                    <span class="intro-item black-han-sans-regular text">깃허브</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <article class="skill">
-
+                <article class="skill" id="skill">
+                    <div>
+                        <div class="anton-regular skill-title text title">SKILL</div>
+                        <div class="skill-item-container">
+                            <div class="ok skill-item-box">
+                                <div><p class="skill-item text">사용 가능해요</p></div>
+                                <div>
+                                    <div>
+                                        <div class="language">HTML5</div>
+                                        <div class="language">CSS3</div>
+                                        <div class="language">MySQL</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="yet skill-item-box">
+                                <div><p class="skill-item text">경험 해봤어요</p></div>
+                                <div>
+                                    <div>
+                                        <div class="language">Markdown</div>
+                                        <div class="language">XML</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="study skill-item-box">
+                                <div><p class="skill-item text">공부 중이에요</p></div>
+                                <div>
+                                    <div>
+                                        <div class="language">Python</div>
+                                        <div class="language">JavaScript</div>
+                                        <div class="language">Git</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
             <section class="project-container">
-                <article class="project project-1">
-
+                <article class="project project-1" id="project">
+                    <div>
+                        <div class="anton-regular project-1-title text title">PROJECT</div>
+                        <div class="project-1-container">
+                            <label for="project-1-1-on-off" class="project-box project-1-1-box">
+                                <p class="project-item text">가비아 클론 페이지</p>
+                                <div>
+                                    <p class="date">2025.04(개인 프로젝트)</p>
+                                    <p class="short-description">'가비아' 웹사이트의 클론 페이지 제작</p>
+                                    <ul class="description-list">
+                                        <li>첫 프로젝트</li>
+                                        <li>슬라이딩 배너 구현(JavaScript)</li>
+                                        <li>네비게이션바 구현(CSS)</li>
+                                        <li>가비아 웹사이트의 각 요소 구현</li>
+                                        <li>HTML, CSS, JavaScript</li>
+                                    </ul>
+                                    <div class="click">
+                                        <img src="images/icon_cursor.png" alt="클릭 아이콘" class="click-icon">
+                                        <span>click</span>
+                                        <input type="checkbox" id="project-1-1-on-off" class="project-on-off">
+                                    </div>
+                                </div>
+                            </label>
+                            <label for="project-1-2-on-off" class="project-box project-1-2-box">
+                                <p class="project-item text">포트폴리오 사이트</p>
+                                <div>
+                                    <p class="date">2025.05(개인 프로젝트)</p>
+                                    <p class="short-description">개인 포트폴리오용 사이트 제작</p>
+                                    <ul class="description-list">
+                                        <li>두 번째 개인 프로젝트</li>
+                                        <li>여러 hover 효과 구현(CSS)</li>
+                                        <li>정십이면체 3D 회전 구현(CSS)</li>
+                                        <li>라벨을 이용한 색 및 폰트 전환 구현(CSS)</li>
+                                        <li>애니메이션 구현(CSS)</li>
+                                        <li>HTML, CSS</li>
+                                    </ul>
+                                    <div class="click">
+                                        <img src="images/icon_cursor.png" alt="클릭 아이콘" class="click-icon">
+                                        <span>click</span>
+                                        <input type="checkbox" id="project-1-2-on-off" class="project-on-off">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
                 </article>
                 <article class="project project-2">
-
+                    <div>
+                        <div class="anton-regular project-2-title text title">PROJECT</div>
+                        <div class="project-2-container">
+                            <label for="project-2-1-on-off" class="project-box project-2-1-box">
+                                <p class="project-item text">소새지 프로젝트</p>
+                                <div>
+                                    <p class="date">2025.04 ~ (4인 팀 프로젝트)</p>
+                                    <p class="short-description">남은 음식물 등을 거래하거나 기부하는 사이트</p>
+                                    <ul class="description-list">
+                                        <li>첫 팀 프로젝트(진행중)</li>
+                                        <li>프론트엔드 담당</li>
+                                        <li>서버 송신 및 수신 구현(JavaScript)</li>
+                                        <li>반응형 사이트 구현</li>
+                                        <li>프론트엔드: HTML, CSS, JavaScript</li>
+                                        <li>백엔드: PHP / DB: MySQL</li>
+                                    </ul>
+                                    <div class="click">
+                                        <img src="images/icon_cursor.png" alt="클릭 아이콘" class="click-icon">
+                                        <span>click</span>
+                                        <input type="checkbox" id="project-2-1-on-off" class="project-on-off">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
                 </article>
             </section>
             <section class="design-guide-container">
-                <article class="design-guide">
-
+                <article class="design-guide" id="design-guide">
+                    <div>
+                        <div class="anton-regular design-guide-title text title">DESIGN</div>
+                        <div class="design-guide-item-container">
+                            <p class="design-item text">COLOR</p>
+                            <div class="design-color">
+                                <div class="color-box color-1-box"><div class="color color-1">#3b3b3b</div></div>
+                                <div class="color-box color-2-box"><div class="color color-2">#7200ff</div></div>
+                                <div class="color-box color-3-box"><div class="color color-3">#fff</div></div>
+                                <div class="color-box color-4-box"><div class="color color-4">#fdeba8</div></div>
+                                <div class="color-box color-5-box"><div class="color color-5">#e88888</div></div>
+                                <div class="color-box color-6-box"><div class="color color-6">#eee</div></div>
+                            </div>
+                            <p class="design-item text">FONT</p>
+                            <div class="design-font">
+                                <div class="font-box font-1-box"><div class="font font-1 anton-regular">anton</div></div>
+                                <div class="font-box font-2-box"><div class="font font-2 orbitron-400">orbitron</div></div>
+                                <div class="font-box font-3-box"><div class="font font-3 monoton-regular">monoton</div></div>
+                                <div class="font-box font-4-box"><div class="font font-4 black-han-sans-regular">black han sans</div></div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
         </main>
         <footer>
+            <div class="footer-circle">
+                <div>
+                    <div class="footer-part-1"><p>임재성.Lim Jae Seong</p><p>2025.5</p></div>
+                    <div class="footer-part-2">
+                        <div><a href="https://www.flaticon.com/kr/free-icons/" title="사용자 아이콘">사용자 아이콘 제작자: Kiranshastry - Flaticon</a></div>
+                        <div><a href="https://www.flaticon.com/kr/free-icons/" title="생신 아이콘">생신 아이콘 제작자: Freepik - Flaticon</a></div>
+                        <div><a href="https://www.flaticon.com/kr/free-icons/" title="이메일 아이콘">이메일 아이콘 제작자: Those Icons - Flaticon</a></div>
+                        <div><a href="https://www.flaticon.com/kr/free-icons/" title="교육 아이콘">교육 아이콘 제작자: Yasa Design - Flaticon</a></div>
+                        <div><a href="https://www.flaticon.com/kr/free-icons/github" title="github 아이콘">Github 아이콘 제작자: Pixel perfect - Flaticon</a></div>
+                        <div><a href="https://www.flaticon.com/kr/free-icons/-" title="왼쪽 클릭 아이콘">왼쪽 클릭 아이콘 제작자: sonnycandra - Flaticon</a></div>
+                    </div>
+                    <div class="copyright"><p>&copy; 2021. Lim Jae Seong. All rights reserved.</p></div>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
