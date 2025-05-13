@@ -31,9 +31,10 @@
         padding: 0;
         width: 100vw;
         background: linear-gradient(135deg, #eee 0%,rgba(114,0,255,1) 100%);
+        overflow: hidden;
     }
 
-    main, footer, .header-box {
+    main, footer, .header-box, .move {
         display: none;
     }
 
