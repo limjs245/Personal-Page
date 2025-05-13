@@ -62,7 +62,7 @@
         aspect-ratio: 1;
         clip-path: polygon(100% 50%,65.45% 97.55%,9.55% 79.39%,9.55% 20.61%,65.45% 2.45%);
         transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
-
+        z-index: 10;
     }
 
     .face.f-1  { transform: rotateY(   0.000deg) rotateX( 31.717deg) rotateZ(-18deg) translateZ(105px); background: #708090; }
@@ -1462,6 +1462,103 @@
 
     body:has(#font-radio-monoton-regular:checked) .design-guide-item-container:hover .design-font::before {
         transform: scale(1, 1) translate(-20px, 10px);
+    }
+
+    /* background motion */
+    .background-motion-line {
+        width: 1px;
+        height: 3000px;
+        border-left: 1px solid #fff;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        opacity: 0.5;
+    }
+
+    .line-1 {
+        right: 50px;
+        animation: background-line-motion 10s infinite ease;
+    }
+
+    .line-2 {
+        right: 68px;
+        animation: background-line-motion-2 8s infinite ease;
+    }
+
+    .line-3 {
+        right: 76px;
+        animation: background-line-motion 9s infinite ease;
+    }
+
+    .line-4 {
+        right: 102px;
+        animation: background-line-motion-2 7s infinite ease;
+    }
+
+    .line-5 {
+        right: 124px;
+        animation: background-line-motion 6s infinite ease;
+    }
+
+    .line-6 {
+        right: 150px;
+        animation: background-line-motion 12s infinite ease;
+    }
+
+    .line-7 {
+        right: 190px;
+        animation: background-line-motion-2 9s infinite ease;
+    }
+
+    .line-8 {
+        right: 200px;
+        animation: background-line-motion 5s infinite ease;
+    }
+
+    .line-9 {
+        right: 224px;
+        animation: background-line-motion-2 8s infinite ease;
+    }
+
+    .line-10 {
+        right: 258px;
+        animation: background-line-motion 10s infinite ease;
+    }
+
+    @keyframes background-line-motion {
+        0% {
+            transform: rotateZ(1.5deg);
+        }
+        25% {
+            transform: rotateZ(1.7deg);
+        }
+        50% {
+            transform: rotateZ(1.5deg);
+        }
+        75% {
+            transform: rotateZ(1.3deg);
+        }
+        100% {
+            transform: rotateZ(1.5deg);
+        }
+    }
+
+    @keyframes background-line-motion-2 {
+        0% {
+            transform: rotateZ(1.5deg);
+        }
+        25% {
+            transform: rotateZ(1.2deg);
+        }
+        50% {
+            transform: rotateZ(1deg);
+        }
+        75% {
+            transform: rotateZ(1.8deg);
+        }
+        100% {
+            transform: rotateZ(1.5deg);
+        }
     }
 
     /* footer */
